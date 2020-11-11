@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>등급계산기</title>
+        <style>
+            .csss{color: white; text-align: center;}
+            .rla{color: black;}
+            body {background-color: midnightblue;}
+        </style>
+    </head>
+    <body>
+        <button class="rla" onclick="pi()" >시작버튼 </button>
+        <p class="csss" id="name"></p>
+        <p class="csss" id="subject"></p>
+        <p class="csss" id="text"></p>
+        <p class="csss" id="qwer"></p>
+        <p class="csss" id="asdf"></p>
+        <script>
+            function pi() {
+                var na = prompt("이름 입력해 주세요:");
+                if (na != null) {
+                    document.getElementById("name").innerHTML=na;
+                }
+                var subx = ["국어", "영어", "수학", "과학", "사회", "기가","기술가정", "정보"];
+                var sub = prompt("과목을 입력해 주세요");
+                if (subx.includes(sub)) {
+                    document.getElementById("subject").innerHTML=sub;
+                } else {
+                    alert("잘못된 과목 입니다. 과목명은 -과목-으로 진행합니다.");
+                    var sub = "-과목-";
+                    document.getElementById("subject").innerHTML=sub;
+                }
+                var ts =prompt("응시 학생수를 입력해 주세요:");
+                if (ts != null) {
+                    document.getElementById("text").innerHTML=ts+"명";
+                }
+                var a = ts * 4 / 100;
+                var b = ts * 11 / 100;
+                var c = ts * 23 / 100;
+                var d = ts * 40 / 100;
+                var e = ts * 60 / 100;
+                var f = ts * 77 / 100;
+                var g = ts * 89 / 100;
+                var h = ts * 96 / 100;
+                var i = ts;
+                var ms = prompt("본인의 등수를 입력해 주세요:");
+                if (ms != null) {
+                    document.getElementById("qwer").innerHTML=ms+"등";
+                }
+                if (ms <= a) {
+                    document.getElementById("asdf").innerHTML=na+"님의"+sub+"등급은 1등급 입니다.";
+                } else if (ms <= b) {
+                    document.getElementById("asdf").innerHTML=na+"님의"+sub+"등급은 2등급 입니다.";
+                } else if (ms <= c) {
+                    document.getElementById("asdf").innerHTML=na+"님의"+sub+"등급은 3등급 입니다.";
+                } else if (ms <= d) {
+                    document.getElementById("asdf").innerHTML=na+"님의"+sub+"등급은 4등급 입니다.";
+                } else if (ms <= e) {
+                    document.getElementById("asdf").innerHTML=na+"님의"+sub+"등급은 5등급 입니다.";
+                } else if (ms <= f) {
+                    document.getElementById("asdf").innerHTML=na+"님의"+sub+"등급은 6등급 입니다.";
+                } else if (ms <= g) {
+                    document.getElementById("asdf").innerHTML=na+"님의"+sub+"등급은 7등급 입니다.";
+                } else if (ms <= h) {
+                    document.getElementById("asdf").innerHTML=na+"님의"+sub+"등급은 8등급 입니다.";
+                } else if (ms <= i) {
+                    document.getElementById("asdf").innerHTML=na+"님의"+sub+"등급은 9등급 입니다.";
+                } else {
+                    document.getElementById("asdf").innerHTML="잘못된 접근입니다. 새로고침을 해주세요";
+                }
+            }
+        </script>
+    </body>
+</html>
